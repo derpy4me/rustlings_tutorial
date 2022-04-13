@@ -40,10 +40,10 @@ impl State {
 
     fn process(&mut self, message: Message) {
         match message {
-            Message::ChangeColor => self.change_color(message.ChangeColor(color)),
-            Message::Echo => self.echo(text),
-            Message::Move => self.move_position(go_to),
-            Message::Quit => self.quit
+            Message::ChangeColor(other_color) => self.change_color(other_color),
+            Message::Echo(text) => self.echo(text),
+            Message::Move(go_to) => self.move_position(go_to),
+            Message::Quit => self.quit()
         };
     }
 }
