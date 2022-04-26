@@ -3,15 +3,14 @@
 
 // Execute `rustlings hint generics2` for hints!
 
-// I AM NOT DONE
 
-struct Wrapper {
-    value: u32,
+struct Wrapper<T> {
+    value: T,
 }
 
-impl Wrapper {
-    pub fn new(value: u32) -> Self {
-        Wrapper { value }
+impl<T> Wrapper<T> {
+    pub fn new(value: T) -> Self {
+        Wrapper { value } // We don't care what type it is, just add a value
     }
 }
 
